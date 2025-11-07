@@ -110,13 +110,15 @@ lib/
 
 ### Firebase Setup (Optional - for Cloud Sync)
 
+📚 **For detailed Firebase configuration instructions in Arabic/English, see [FIREBASE_SETUP.md](FIREBASE_SETUP.md)**
+
+**Quick setup**:
 1. Create a Firebase project at [console.firebase.google.com](https://console.firebase.google.com)
-2. Add iOS and Android apps to your project
-3. Download `google-services.json` (Android) and `GoogleService-Info.plist` (iOS)
-4. Place files in the appropriate directories:
-   - Android: `android/app/google-services.json`
-   - iOS: `ios/Runner/GoogleService-Info.plist`
-5. Uncomment Firebase initialization in `lib/main.dart`
+2. Add Android app with package name: `com.bagomri.docsaver.docsaver_app`
+3. Download `google-services.json` and place at: `android/app/google-services.json`
+4. Run: `flutter clean && flutter pub get && flutter run`
+
+**Note**: Firebase is already configured in the code with graceful fallback. The app will work without Firebase, but cloud features won't be available until you add `google-services.json`.
 
 ---
 
