@@ -108,15 +108,23 @@ lib/
    flutter run
    ```
 
-### Firebase Setup (Optional - for Cloud Sync)
+### Firebase Setup (Required for Cloud Features)
 
-1. Create a Firebase project at [console.firebase.google.com](https://console.firebase.google.com)
-2. Add iOS and Android apps to your project
-3. Download `google-services.json` (Android) and `GoogleService-Info.plist` (iOS)
-4. Place files in the appropriate directories:
-   - Android: `android/app/google-services.json`
-   - iOS: `ios/Runner/GoogleService-Info.plist`
-5. Uncomment Firebase initialization in `lib/main.dart`
+Firebase is integrated and ready to use. To complete the setup:
+
+1. **Place your `google-services.json` file** in `android/app/` directory
+   - Download it from [Firebase Console](https://console.firebase.google.com)
+   - A template file is provided in `android/app/google-services.json.template`
+   
+2. **See detailed setup instructions**: [FIREBASE_SETUP.md](FIREBASE_SETUP.md)
+
+The following Firebase services are configured:
+- ✅ Firebase Authentication (for user accounts)
+- ✅ Firebase Storage (for document cloud backup)
+- ✅ Firebase Crashlytics (for crash reporting)
+- ✅ Firebase Analytics (for usage insights)
+
+**Note**: The app will run without Firebase, but cloud sync and authentication features will be disabled.
 
 ---
 
